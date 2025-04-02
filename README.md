@@ -2,7 +2,7 @@
 
 <h1 align="left" id="title">Patient Record-Keeping 🩺</h1>
 
-<p id="description">The Patient Record-Keeping App is a secure and efficient solution for managing patient records and medical histories. It provides healthcare professionals with an easy-to-use platform to store, retrieve, and update patient information seamlessly.</p>
+<p id="description">The Oncolab App is a secure and efficient solution for managing patient lab records. It provides healthcare professionals with an easy-to-use platform to store, retrieve, and update patient information seamlessly.</p>
 
   
   
@@ -10,8 +10,8 @@
 
 Here're some of the project's best features:
 
-*   Secure Patient Profiles: Store and manage detailed patient records, including personal information, medical history, and contact details.
-*   Medical Records Management: Record diagnoses, prescriptions, lab reports, and treatment history.
+*   Secure Patient Profiles: Store and manage detailed patient records, including personal information, lab details of multiple visits, and contact details.
+*   Medical Records Management: Record diagnoses, lab reports, and treatment history.
 *   Search & Filtering: Quickly find patient records using advanced search and filtering options.
 *   Reports & Analytics: Generate insightful reports on patient demographics, visit history, and treatments.
 
@@ -26,7 +26,7 @@ git clone "repository-url"
 <p>2. Navigate to the project directory & install dependencies: Client & Server</p>
 
 ```
-cd Task
+cd Oncolab
 cd client/ cd server
 npm install
 ```
