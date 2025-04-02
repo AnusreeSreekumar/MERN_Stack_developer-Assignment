@@ -20,7 +20,7 @@ Here're some of the project's best features:
 <p>1. Clone the repository:</p>
 
 ```
-git clone "repository-url"
+git clone git@github.com:AnusreeSreekumar/MERN_Stack_developer-Assignment.git
 ```
 
 <p>2. Navigate to the project directory & install dependencies: Client & Server</p>
