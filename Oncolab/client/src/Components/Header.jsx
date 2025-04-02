@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { FaBars, FaBell, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 import avatar from "../assets/avatar.png";
 
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-blue-200">
@@ -39,7 +41,10 @@ function Header() {
       </header>
 
       {isSidebarOpen && (
-        <div className="fixed top-16 left-0 h-full w-64 bg-[#0d5c88] text-white shadow-lg p-5 z-50">
+        <div
+          className="fixed top-16 left-0 h-full w-64 bg-[#0d5c88] text-white shadow-lg p-5 z-50"
+          onMouseLeave={() => setIsSidebarOpen(false)} // Close sidebar on mouse leave
+        >
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="absolute top-4 right-4 text-2xl"
@@ -50,15 +55,30 @@ function Header() {
           <h2 className="text-lg font-semibold mb-4">Primary Menu</h2>
 
           <nav className="space-y-3">
-            <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-700">
+            <button
+              className="block w-full text-left py-2 px-4 rounded hover:bg-gray-700"
+              onClick={() => navigate("/")}
+            >
               Rider Tracking
             </button>
-            <button className="block w-full text-left py-2 px-4 rounded opacity-50 cursor-not-allowed">
+            <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-700">
               Workstation Master
             </button>
-            <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-700">
+            <button
+              className="block w-full text-left py-2 px-4 rounded hover:bg-gray-700"
+              onClick={() => navigate("/yearlyConsolidated")}
+            >
               Yearly Consolidated Report
             </button>
+            <div>
+              <h3 className="text-sm font-semibold mt-4 mb-2">Financial MIS Reports</h3>
+              <button
+                className="block w-full text-left py-2 px-4 rounded hover:bg-gray-700"
+                onClick={() => navigate("/billTransaction")}
+              >
+                Bill Transaction Report
+              </button>
+            </div>
           </nav>
         </div>
       )}
